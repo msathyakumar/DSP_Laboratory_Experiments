@@ -1,0 +1,57 @@
+%Random signals
+
+clc;
+clear all;
+close all;
+ 
+n = input('enter n value ');
+x = rand(1,n);
+subplot(2,4,1);
+plot(x);
+title('continuous random signal');
+xlabel('amplitude and time');
+ylabel('amplitude');
+subplot(2,4,2);
+stem(x);
+title('discrete random signal');
+xlabel('time');
+ylabel('amplitude');
+ 
+y = randn(1,10);
+subplot(2,4,3);
+plot(y);
+title('continuous random signal ');
+xlabel('time');
+ylabel('amplitude');
+subplot(2,4,4);
+stem(y);
+title('discrete random signal ');
+xlabel('time');
+ylabel('amplitude');
+ 
+z = rand(10,1,1);
+subplot(2,4,5);
+plot(z);
+title('continuous random sequence');
+xlabel('time');
+ylabel('amplitude');
+subplot(2,4,6);
+stem(z);
+title('discrete random sequence');
+xlabel('time');
+ylabel('amplitude');
+ 
+s = randperm(10);
+subplot(2,4,7);
+plot(s);
+title('continuous time random sequence');
+xlabel('time');
+ylabel('amplitude');
+subplot(2,4,8);
+stem(s)
+title('discrete time random sequence');
+xlabel('time');
+ylabel('amplitude');
+
+
+enter n value 5

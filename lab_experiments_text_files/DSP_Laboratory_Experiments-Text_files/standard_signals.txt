@@ -1,0 +1,35 @@
+%Standard Signals
+
+clc;
+clear all;
+close all;
+n = input('enter the length of the step sequence');
+n1 = input('enter the length of ramp sequence');
+n2 = input('enter the value of exponentional sequence');
+a = input('enter the value')'
+t = -2:1:2;
+y =[zeros(1,2),ones(1,1),zeros(1,2)];
+subplot(2,2,1);
+stem(t,y);
+xlabel('a(n) impulse sequence');
+ylabel('amplitude');
+% step gentertion
+t = 0:n-1;
+y1 = ones(1,n);
+subplot(2,2,2);
+stem(t,y1);
+xlabel('b(n)----> step sequence');
+ylabel('amplitude------>');
+% ramp generation
+t = 0:n1;
+subplot(2,2,3);
+stem(t,t);
+xlabel('c(n)----> ramp sequence');
+ylabel('amplitude ----->');
+%exponentation
+t = 0:1:n2;
+e = exp(t);
+subplot(2,2,4);
+stem(t,e);
+xlabel('d(n)----> exp sequence ');
+ylabel('amplitude---->');

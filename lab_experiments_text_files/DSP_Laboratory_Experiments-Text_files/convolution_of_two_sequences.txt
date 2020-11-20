@@ -1,0 +1,32 @@
+%convolution
+
+clc;
+clear all;
+close all;
+n1 = input('Enter the first sequence');
+x = length(n1);
+N1 = 0:1:x-1;
+subplot(3,1,1);
+stem(N1,n1);
+title('n1 sequence');
+ylabel('amplitude');
+xlabel('frequency');
+display(n1);
+ 
+n2 = input('Enter the second sequence');
+y = length(n2);
+N2 = 0:1:y-1;
+subplot(3,1,2);
+stem(N2,n2);
+title('n2 sequence');
+ylabel('amplitude');
+xlabel('frequency');
+display(n2);
+p = conv(n1,n2);
+N3 = 0:1:x+y-2;
+subplot(3,1,3);
+stem(p,N3);
+title('convolution of 2 sequences');
+ylabel('amplitude');
+xlabel('frequency');
+display(p);

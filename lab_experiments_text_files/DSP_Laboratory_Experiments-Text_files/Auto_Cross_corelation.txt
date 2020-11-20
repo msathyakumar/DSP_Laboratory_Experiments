@@ -1,0 +1,46 @@
+%AUTO AND CROSS CORRELATION
+
+
+
+clc;
+clear all;
+close all;
+%n1 sequence
+n1 = input('enter the sequence of n1');
+x = length(n1);
+subplot(2,2,1);
+N1 = 0:1:x-1;
+stem(N1,n1);
+title('n1 sequence');
+xlabel('frequency');
+ylabel('amplitude');
+display(n1);
+% n2 sequence
+n2 = input('enter the sequence of n2');
+subplot(2,2,2);
+N2 = 0:1:length(n2)-1;
+stem(N2,n2);
+title('n2 sequence');
+xlabel('frequency');
+ylabel('amplitude');
+display(n2);
+ 
+% cross corelation
+subplot(2,2,3);
+c = xcorr(n1,n2);
+c1 = 0:1:length(n2)+x-2;
+stem(c1,c);
+title('cross correlation');
+xlabel('frequency');
+ylabel('amplitude');
+display(c);
+ 
+% auto corelation
+subplot(2,2,4);
+d = xcorr(n1,n1);
+d1 = 0:1:x+x-2;
+stem(d1,d);
+title('auto correlation');
+xlabel('frequency');
+ylabel('amplitude');
+display(d);
