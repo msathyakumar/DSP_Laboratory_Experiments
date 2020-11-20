@@ -1,0 +1,15 @@
+%ENERGY AND POWER
+
+clc;
+clear all;
+close all;
+T=0.8;
+a=10;
+f=5;
+t=-8:0.01:8;
+x=10*sin(2*pi*f*t);
+y=x.^2;
+E=trapz(t,y);
+p=E/(2*T);
+display(['energy=',num2str(E),'joules']);
+display(['average power=',num2str(p),'watts']);
